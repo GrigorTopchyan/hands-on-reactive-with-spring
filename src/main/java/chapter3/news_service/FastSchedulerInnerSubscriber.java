@@ -12,12 +12,12 @@ public class FastSchedulerInnerSubscriber<T> extends SchedulerInnerSubscriber<T>
     }
 
     @Override
-    public void onNext(Object o) {
+    public void onNext(T o) {
         if (parent.canceled){
             s.cancel();
             return;
         }else {
-            parent.emit();
+            parent.emit(o);
         }
     }
 }

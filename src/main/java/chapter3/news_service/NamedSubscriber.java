@@ -23,4 +23,8 @@ public class NamedSubscriber<T> implements Subscriber<T> {
     public void onComplete() {
 
     }
+
+    public String getName() {
+        return null;
+    }
 }
